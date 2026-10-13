@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="goldBarTopI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3B0" />
+      <stop offset="35%" stop-color="#FCD34D" />
+      <stop offset="70%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+
+    <linearGradient id="goldBarFrontI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAB308" />
+      <stop offset="40%" stop-color="#CA8A04" />
+      <stop offset="85%" stop-color="#996515" />
+      <stop offset="100%" stop-color="#78450A" />
+    </linearGradient>
+
+    <linearGradient id="goldBarEndI" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D99B26" />
+      <stop offset="50%" stop-color="#A16207" />
+      <stop offset="100%" stop-color="#713F12" />
+    </linearGradient>
+
+    <linearGradient id="goldRingI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="25%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="75%" stop-color="#FEF08A" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <linearGradient id="goldRingRimI" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CA8A04" />
+      <stop offset="50%" stop-color="#FEF9C3" />
+      <stop offset="100%" stop-color="#854D0E" />
+    </linearGradient>
+
+    <linearGradient id="sparkleGradI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+
+    <filter id="glowI" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <g transform="translate(0, 10)">
+    <!-- BACK HALF OF SATURN RINGS -->
+    <g transform="rotate(-26, 60, 52)">
+      <path d="M 12,52 A 52,22 0 0,1 108,52" fill="none" stroke="url(#goldRingI)" stroke-width="8" stroke-linecap="round" />
+      <path d="M 17,52 A 47,17 0 0,1 103,52" fill="none" stroke="url(#goldRingRimI)" stroke-width="2.5" opacity="0.9" />
+    </g>
+
+    <!-- Shadow -->
+    <polygon points="34,70 66,88 92,68 62,54" fill="#000000" opacity="0.18" />
+
+    <!-- Left end facet -->
+    <polygon points="34,44 48,34 48,56 34,68" fill="url(#goldBarEndI)" />
+    <!-- Front long face -->
+    <polygon points="48,34 94,54 84,76 34,68 48,56" fill="url(#goldBarFrontI)" />
+    <!-- Top face (Bright reflection) -->
+    <polygon points="34,44 48,34 94,54 80,64" fill="url(#goldBarTopI)" />
+
+    <!-- Specular highlight line on top ridge -->
+    <line x1="48" y1="34" x2="94" y2="54" stroke="#FFFBEB" stroke-width="2" stroke-linecap="round" />
+    <line x1="34" y1="44" x2="48" y2="34" stroke="#FFFBEB" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- FRONT HALF OF SATURN RINGS -->
+    <g transform="rotate(-26, 60, 52)">
+      <path d="M 12,52 A 52,22 0 0,0 108,52" fill="none" stroke="url(#goldRingI)" stroke-width="8" stroke-linecap="round" />
+      <path d="M 15,53 A 49,19 0 0,0 105,53" fill="none" stroke="#FFF7B2" stroke-width="2" opacity="0.85" />
+      <path d="M 20,52 A 44,14 0 0,0 100,52" fill="none" stroke="url(#goldRingRimI)" stroke-width="3" opacity="0.95" />
+    </g>
+
+    <!-- FOUR-POINT DIAMOND SPARKLES -->
+    <g transform="translate(14, 40) scale(1.3)">
+      <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="url(#sparkleGradI)" filter="url(#glowI)" />
+      <circle cx="0" cy="0" r="1.5" fill="#FFFFFF" />
+    </g>
+
+    <g transform="translate(20, 68) scale(0.9)">
+      <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="url(#sparkleGradI)" />
+      <circle cx="0" cy="0" r="1.5" fill="#FFFFFF" />
+    </g>
+  </g>
+</svg>

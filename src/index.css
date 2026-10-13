@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Medium.ttf') format('truetype');
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JostLight';
+  src: url('/fonts/Jost-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JostRegular';
+  src: url('/fonts/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --color-saturn-cream: #F4F0E6;
+    --color-saturn-sand: #EFE9DC;
+    --color-saturn-obsidian: #0E0F14;
+    --color-saturn-surface: #121318;
+    --color-saturn-surface-dark: #161720;
+    --color-saturn-footer: #0A0B0E;
+    --color-saturn-gold: #C5A059;
+    --color-saturn-gold-hover: #B89047;
+    --color-saturn-gold-light: #E2C37E;
+    --color-saturn-ink: #14151A;
+    --color-saturn-muted: #282A34;
+    --color-saturn-muted-dark: #C5C2BB;
+
+    --font-sans: 'Jost', 'JostRegular', 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+    --font-heading: 'Jost', 'JostLight', sans-serif;
+    --font-serif: 'Jost', 'JostLight', sans-serif;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #1A1B22;
+    font-family: var(--font-sans);
+    font-weight: 450;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Body typography: ensure paragraphs, lists, and inputs carry comfortable readable weight */
+  p, li, dd, input, textarea, select {
+    font-weight: 450;
+  }
+
+  /* Global typography rule: Jost Light for all headings across the app */
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-serif {
+    font-family: 'Jost', 'JostLight', sans-serif !important;
+    font-weight: 300 !important;
+    letter-spacing: -0.015em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    line-height: 1.16;
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+
+  h3 {
+    line-height: 1.26;
+  }
+
+  /* Global dark background header contrast & crisp visibility */
+  .bg-saturn-obsidian h1,
+  .bg-saturn-obsidian h2,
+  .bg-saturn-obsidian h3,
+  .bg-saturn-obsidian h4,
+  .bg-saturn-surface h1,
+  .bg-saturn-surface h2,
+  .bg-saturn-surface h3,
+  .bg-saturn-surface h4,
+  [class*="bg-[#0E0F14]"] h1,
+  [class*="bg-[#0E0F14]"] h2,
+  [class*="bg-[#0E0F14]"] h3,
+  [class*="bg-[#0E0F14]"] h4,
+  [class*="bg-[#121318]"] h1,
+  [class*="bg-[#121318]"] h2,
+  [class*="bg-[#121318]"] h3,
+  [class*="bg-[#121318]"] h4,
+  [class*="bg-[#0A0B0E]"] h1,
+  [class*="bg-[#0A0B0E]"] h2,
+  [class*="bg-[#0A0B0E]"] h3,
+  [class*="bg-[#0A0B0E]"] h4 {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Subtle clean scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F4F2EC;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4CFBE;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B89047;
+  }
+}
+
+@layer components {
+  /* =========================================================================
+     SATURN GLOBAL FZCO - Consolidated UI Component Classes
+     ========================================================================= */
+
+  /* Section Eyebrow / Badges */
+  .saturn-badge-dark {
+    @apply inline-block uppercase font-bold tracking-widest text-[11px] px-3.5 py-1.5 rounded-sm bg-[#2D2E30] text-white shadow-sm;
+  }
+
+  .saturn-badge-light {
+    @apply inline-block uppercase font-bold tracking-widest text-[11px] px-3.5 py-1.5 rounded-sm bg-[#DDD6C7] text-[#0E0F14] shadow-sm;
+  }
+
+  .saturn-badge-gold {
+    @apply inline-block uppercase font-extrabold tracking-widest text-[11px] px-3.5 py-1.5 rounded-full bg-saturn-gold text-saturn-obsidian shadow-sm;
+  }
+
+  /* Standardized Section Header Block with Generous Vertical Rhythm */
+  .saturn-header-block {
+    @apply text-left space-y-4 sm:space-y-6 mb-12 sm:mb-16 max-w-4xl;
+  }
+
+  /* Headings with Jost Light, generous vertical line height, and symmetric letter spacing */
+  .saturn-h1 {
+    @apply font-heading font-light text-4xl sm:text-5xl lg:text-[54px] xl:text-[62px] leading-[1.16] sm:leading-[1.12] tracking-[-0.02em] text-saturn-ink;
+  }
+
+  .saturn-h1-dark {
+    @apply font-heading font-light text-4xl sm:text-5xl lg:text-[54px] xl:text-[62px] leading-[1.16] sm:leading-[1.12] tracking-[-0.02em] text-white;
+  }
+
+  .saturn-h2 {
+    @apply font-heading font-light text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.2] sm:leading-[1.16] tracking-[-0.015em] text-saturn-ink;
+  }
+
+  .saturn-h2-dark {
+    @apply font-heading font-light text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] leading-[1.2] sm:leading-[1.16] tracking-[-0.015em] text-white;
+  }
+
+  .saturn-h3 {
+    @apply font-heading font-light text-2xl sm:text-3xl lg:text-[36px] leading-[1.26] tracking-[-0.01em] text-saturn-ink;
+  }
+
+  .saturn-h3-dark {
+    @apply font-heading font-light text-2xl sm:text-3xl lg:text-[36px] leading-[1.26] tracking-[-0.01em] text-white;
+  }
+
+  /* Body Paragraphs with airy readability and solid weight */
+  .saturn-lead {
+    @apply text-base sm:text-lg lg:text-[18px] leading-[1.75] text-[#242630] font-normal max-w-2xl;
+  }
+
+  .saturn-lead-dark {
+    @apply text-base sm:text-lg lg:text-[18px] leading-[1.75] text-white/95 font-normal max-w-2xl;
+  }
+
+  /* Action Buttons */
+  .saturn-btn-dark {
+    @apply bg-saturn-surface hover:bg-[#1E1F28] text-white hover:text-saturn-gold border border-saturn-gold/40 hover:border-saturn-gold text-base font-normal px-9 py-3.5 rounded-full transition-all duration-200 shadow-md active:scale-95 inline-flex items-center justify-center;
+  }
+
+  .saturn-btn-gold {
+    @apply bg-saturn-gold hover:bg-saturn-gold-hover text-saturn-obsidian text-base font-medium px-9 py-3.5 rounded-full transition-all duration-200 shadow-md active:scale-95 inline-flex items-center justify-center;
+  }
+
+  /* Standard Card Container on Dark Obsidian */
+  .saturn-card-dark {
+    @apply bg-[#121318] border border-saturn-gold/40 rounded-2xl sm:rounded-3xl shadow-xl transition-all duration-300;
+  }
+}
+
+/* Corporate Gold Gradient Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #8E6B2F 0%, #B89047 50%, #DDBE6F 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #C5A059 0%, #B89047 60%, #9E7730 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(184, 144, 71, 0.25);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
