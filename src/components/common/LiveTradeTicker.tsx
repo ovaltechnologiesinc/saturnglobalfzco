@@ -105,7 +105,7 @@ export function LiveTradeTicker({
     >
       <div
         className={cn(
-          'w-full rounded-full py-1.5 sm:py-2 px-3 sm:px-5 flex items-center overflow-hidden border shadow-xs transition-all relative',
+          'w-full rounded-tl-xl sm:rounded-tl-2xl rounded-br-xl sm:rounded-br-2xl rounded-tr-md sm:rounded-tr-lg rounded-bl-md sm:rounded-bl-lg py-1.5 sm:py-2 px-3 sm:px-5 flex items-center overflow-hidden border shadow-xs transition-all relative',
           theme === 'dark'
             ? 'bg-[#0E0F14] text-white border-saturn-gold/35'
             : 'bg-white text-saturn-obsidian border-[#DDD8CA]'

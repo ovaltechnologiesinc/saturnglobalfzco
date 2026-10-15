@@ -47,9 +47,9 @@ export function Navbar({ currentPath }: NavbarProps) {
         {/* Slim Rectangular Sliding Live Trading Marquee (takes exact same size, length, and padding as Header) */}
         <LiveTradeTicker theme="dark" />
 
-        {/* Floating White Pill Container expanded sideways to max-w-7xl matching the page outlet */}
+        {/* Floating Architectural Container expanded sideways to max-w-7xl matching Saturn Global's brand geometry */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full bg-white rounded-full px-5 sm:px-8 lg:px-10 py-2.5 sm:py-3 shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-black/[0.04] flex items-center justify-between">
+          <div className="w-full bg-white/95 backdrop-blur-md rounded-tl-[24px] sm:rounded-tl-[36px] rounded-br-[24px] sm:rounded-br-[36px] rounded-tr-xl sm:rounded-tr-2xl rounded-bl-xl sm:rounded-bl-2xl px-5 sm:px-8 lg:px-10 py-2.5 sm:py-3 shadow-[0_6px_25px_rgba(14,15,20,0.07)] border border-saturn-gold/30 hover:border-saturn-gold/60 transition-all duration-300 flex items-center justify-between relative">
             {/* Brand Logo matching template (SATURN GLOBAL FZCO) */}
             <Link
               to="/"
