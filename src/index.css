@@ -260,3 +260,45 @@
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
+
+/* Continuous Right-to-Left Sliding Marquee for Live Trading Cards */
+@keyframes tickerSlideLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker-slide {
+  display: flex;
+  width: max-content;
+  animation: tickerSlideLeft 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-ticker-slide:hover {
+  animation-play-state: paused;
+}
+
+.animate-ticker-slide-fast {
+  display: flex;
+  width: max-content;
+  animation: tickerSlideLeft 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-ticker-slide-fast:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars for clean marquee presentation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

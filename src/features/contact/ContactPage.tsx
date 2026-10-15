@@ -1,25 +1,30 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Container } from '@/components/layout/Container';
-import { DubaiGoldSoukMap } from './DubaiGoldSoukMap';
-import { COMPANY_INFO } from '@/data/companyData';
-import { Building2, Mail, Phone, CheckCircle2 } from 'lucide-react';
-import { submitContactInquiry, getWhatsAppTradingDeskUrl } from '@/lib/contactService';
-import { WhatsAppIcon } from '@/components/common/WhatsAppIcon';
-import { CountryCodeDropdown } from '@/components/common/CountryCodeDropdown';
-import { POPULAR_COUNTRIES, CountryCode } from '@/data/countryCodes';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Container } from "@/components/layout/Container";
+import { DubaiGoldSoukMap } from "./DubaiGoldSoukMap";
+import { COMPANY_INFO } from "@/data/companyData";
+import { Building2, Mail, Phone, CheckCircle2 } from "lucide-react";
+import {
+  submitContactInquiry,
+  getWhatsAppTradingDeskUrl,
+} from "@/lib/contactService";
+import { WhatsAppIcon } from "@/components/common/WhatsAppIcon";
+import { CountryCodeDropdown } from "@/components/common/CountryCodeDropdown";
+import { POPULAR_COUNTRIES, CountryCode } from "@/data/countryCodes";
 
 export function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState<CountryCode>(POPULAR_COUNTRIES[0]);
+  const [selectedCountry, setSelectedCountry] = useState<CountryCode>(
+    POPULAR_COUNTRIES[0],
+  );
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
-    helpMessage: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+    helpMessage: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,7 +34,7 @@ export function ContactPage() {
     try {
       const fullPhone = formData.phone
         ? `${selectedCountry.dialCode} ${formData.phone}`
-        : '';
+        : "";
       await submitContactInquiry({ ...formData, phone: fullPhone });
       setSubmitted(true);
     } finally {
@@ -48,19 +53,18 @@ export function ContactPage() {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="saturn-header-block mb-12 sm:mb-16"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-12 saturn-header-block sm:mb-16"
           >
-            <span className="saturn-badge-dark">
-              CONTACT US
-            </span>
+            <span className="saturn-badge-dark">CONTACT US</span>
 
-            <h1 className="saturn-h1 pt-1">
+            <h1 className="pt-1 saturn-h1">
               Get in Touch with Saturn Global FZCO
             </h1>
 
-            <p className="saturn-lead pt-1">
-              Whether you want to sell scrap gold, buy bullion bars, store your metals, or partner on a mining project, we are here to assist you.
+            <p className="pt-1 saturn-lead">
+              Whether you want to sell scrap gold, buy bullion bars, store your
+              metals, or partner on a mining project, we are here to assist you.
             </p>
           </motion.div>
 
@@ -68,47 +72,60 @@ export function ContactPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-20px' }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="bg-gradient-to-br from-saturn-gold-light via-saturn-gold to-saturn-gold-dark rounded-tl-[80px] sm:rounded-tl-[120px] lg:rounded-tl-[160px] rounded-tr-[80px] sm:rounded-tr-[120px] lg:rounded-tr-[160px] rounded-bl-[80px] sm:rounded-bl-[120px] lg:rounded-bl-[160px] rounded-br-[28px] sm:rounded-br-[36px] p-8 sm:p-14 lg:p-20 text-left shadow-2xl border-2 border-saturn-gold-bright/60 relative"
           >
             {/* Subtle warm ambient highlight clipped to card curvature */}
             <div className="absolute inset-0 rounded-tl-[80px] sm:rounded-tl-[120px] lg:rounded-tl-[160px] rounded-tr-[80px] sm:rounded-tr-[120px] lg:rounded-tr-[160px] rounded-bl-[80px] sm:rounded-bl-[120px] lg:rounded-bl-[160px] rounded-br-[28px] sm:rounded-br-[36px] overflow-hidden pointer-events-none">
-              <div className="absolute top-0 left-0 w-80 h-80 bg-white/20 rounded-full blur-3xl" />
+              <div className="absolute top-0 left-0 rounded-full w-80 h-80 bg-white/20 blur-3xl" />
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+            <div className="relative z-10 grid items-start grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Get in Touch Title (Slide in from Left) */}
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
-                className="lg:col-span-5 space-y-4"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="space-y-4 lg:col-span-5"
               >
                 <h2 className="text-5xl sm:text-6xl lg:text-[76px] font-normal leading-[1.08] text-saturn-obsidian tracking-tight font-heading">
-                  Get<br />
+                  Get
+                  <br />
                   in Touch
                 </h2>
-                <p className="text-saturn-obsidian/90 text-base sm:text-lg font-normal leading-relaxed max-w-sm pt-2">
-                  Whether you want to sell scrap gold, buy bullion bars, store your metals, or partner on a mining project, we are here to assist you.
+                <p className="max-w-sm pt-2 text-base font-normal leading-relaxed text-saturn-obsidian/90 sm:text-lg">
+                  Whether you want to sell scrap gold, buy bullion bars, store
+                  your metals, or partner on a mining project, we are here to
+                  assist you.
                 </p>
 
                 {/* Direct DMCC Trading Desk Channels */}
                 <div className="pt-6 space-y-3.5 border-t border-saturn-obsidian/20 text-saturn-obsidian">
-                  <div className="flex items-start gap-3 text-sm sm:text-base font-normal">
+                  <div className="flex items-start gap-3 text-sm font-normal sm:text-base">
                     <Building2 className="w-5 h-5 mt-0.5 shrink-0 text-saturn-obsidian" />
-                    <span>{COMPANY_INFO.address.office}, {COMPANY_INFO.address.building}, {COMPANY_INFO.address.area}, {COMPANY_INFO.address.city}</span>
+                    <span>
+                      {COMPANY_INFO.address.office},{" "}
+                      {COMPANY_INFO.address.building},{" "}
+                      {COMPANY_INFO.address.area}, {COMPANY_INFO.address.city}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm sm:text-base font-normal">
+                  <div className="flex items-center gap-3 text-sm font-normal sm:text-base">
                     <Mail className="w-5 h-5 shrink-0 text-saturn-obsidian" />
-                    <a href={`mailto:${COMPANY_INFO.email}`} className="hover:underline underline-offset-2">
+                    <a
+                      href={`mailto:${COMPANY_INFO.email}`}
+                      className="hover:underline underline-offset-2"
+                    >
                       {COMPANY_INFO.email}
                     </a>
                   </div>
-                  <div className="flex items-center gap-3 text-sm sm:text-base font-normal">
+                  <div className="flex items-center gap-3 text-sm font-normal sm:text-base">
                     <Phone className="w-5 h-5 shrink-0 text-saturn-obsidian" />
-                    <a href={`tel:${COMPANY_INFO.phone}`} className="hover:underline underline-offset-2">
+                    <a
+                      href={`tel:${COMPANY_INFO.phone}`}
+                      className="hover:underline underline-offset-2"
+                    >
                       {COMPANY_INFO.displayPhone} (Dubai Desk)
                     </a>
                   </div>
@@ -119,18 +136,27 @@ export function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
                 className="lg:col-span-7"
               >
                 {submitted ? (
-                  <div className="bg-black/15 p-8 sm:p-10 rounded-3xl border border-saturn-obsidian/25 text-center space-y-5 shadow-inner">
-                    <CheckCircle2 className="w-12 h-12 text-saturn-obsidian mx-auto" />
-                    <h3 className="text-2xl sm:text-3xl font-semibold text-saturn-obsidian font-heading">
+                  <div className="p-8 space-y-5 text-center border shadow-inner bg-black/15 sm:p-10 rounded-3xl border-saturn-obsidian/25">
+                    <CheckCircle2 className="w-12 h-12 mx-auto text-saturn-obsidian" />
+                    <h3 className="text-2xl font-semibold sm:text-3xl text-saturn-obsidian font-heading">
                       Inquiry Sent to Saturn Global Desk
                     </h3>
-                    <p className="text-saturn-obsidian/90 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
-                      Thank you, <span className="font-semibold">{formData.firstName}</span>. Your inquiry has been routed directly to our DMCC bullion desk (<span className="font-semibold">{COMPANY_INFO.email}</span>).
+                    <p className="max-w-md mx-auto text-sm leading-relaxed text-saturn-obsidian/90 sm:text-base">
+                      Thank you,{" "}
+                      <span className="font-semibold">
+                        {formData.firstName}
+                      </span>
+                      . Your inquiry has been routed directly to our DMCC
+                      bullion desk (
+                      <span className="font-semibold">
+                        {COMPANY_INFO.email}
+                      </span>
+                      ).
                     </p>
 
                     {/* 1-Click WhatsApp Quick-Chat Action */}
@@ -151,15 +177,15 @@ export function ContactPage() {
                         onClick={() => {
                           setSubmitted(false);
                           setFormData({
-                            firstName: '',
-                            lastName: '',
-                            email: '',
-                            phone: '',
-                            company: '',
-                            helpMessage: '',
+                            firstName: "",
+                            lastName: "",
+                            email: "",
+                            phone: "",
+                            company: "",
+                            helpMessage: "",
                           });
                         }}
-                        className="text-xs text-saturn-obsidian/75 hover:text-saturn-obsidian hover:underline underline-offset-2 transition-colors font-medium"
+                        className="text-xs font-medium transition-colors text-saturn-obsidian/75 hover:text-saturn-obsidian hover:underline underline-offset-2"
                       >
                         ← Send another inquiry
                       </button>
@@ -168,9 +194,9 @@ export function ContactPage() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-8">
                     {/* Row 1: First Name & Last Name */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                       <div>
-                        <label className="block text-sm text-saturn-obsidian mb-2 font-medium">
+                        <label className="block mb-2 text-sm font-medium text-saturn-obsidian">
                           First name *
                         </label>
                         <input
@@ -178,14 +204,17 @@ export function ContactPage() {
                           required
                           value={formData.firstName}
                           onChange={(e) =>
-                            setFormData({ ...formData, firstName: e.target.value })
+                            setFormData({
+                              ...formData,
+                              firstName: e.target.value,
+                            })
                           }
-                          className="w-full bg-transparent border-b border-saturn-obsidian/35 pb-2 text-base text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian transition-colors placeholder-saturn-obsidian/40"
+                          className="w-full pb-2 text-base transition-colors bg-transparent border-b border-saturn-obsidian/35 text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian placeholder-saturn-obsidian/40"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm text-saturn-obsidian mb-2 font-medium">
+                        <label className="block mb-2 text-sm font-medium text-saturn-obsidian">
                           Last name *
                         </label>
                         <input
@@ -193,17 +222,20 @@ export function ContactPage() {
                           required
                           value={formData.lastName}
                           onChange={(e) =>
-                            setFormData({ ...formData, lastName: e.target.value })
+                            setFormData({
+                              ...formData,
+                              lastName: e.target.value,
+                            })
                           }
-                          className="w-full bg-transparent border-b border-saturn-obsidian/35 pb-2 text-base text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian transition-colors placeholder-saturn-obsidian/40"
+                          className="w-full pb-2 text-base transition-colors bg-transparent border-b border-saturn-obsidian/35 text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian placeholder-saturn-obsidian/40"
                         />
                       </div>
                     </div>
 
                     {/* Row 2: Email & Phone */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                       <div>
-                        <label className="block text-sm text-saturn-obsidian mb-2 font-medium">
+                        <label className="block mb-2 text-sm font-medium text-saturn-obsidian">
                           Email *
                         </label>
                         <input
@@ -213,29 +245,32 @@ export function ContactPage() {
                           onChange={(e) =>
                             setFormData({ ...formData, email: e.target.value })
                           }
-                          className="w-full bg-transparent border-b border-saturn-obsidian/35 pb-2 text-base text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian transition-colors placeholder-saturn-obsidian/40"
+                          className="w-full pb-2 text-base transition-colors bg-transparent border-b border-saturn-obsidian/35 text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian placeholder-saturn-obsidian/40"
                         />
                       </div>
 
                       <div className="relative z-20">
-                        <label className="block text-sm text-saturn-obsidian mb-2 font-medium">
+                        <label className="block mb-2 text-sm font-medium text-saturn-obsidian">
                           Phone
                         </label>
-                        <div className="relative flex items-center border-b border-saturn-obsidian/35 pb-2 gap-2">
+                        <div className="relative flex items-center gap-2 pb-2 border-b border-saturn-obsidian/35">
                           <CountryCodeDropdown
                             selected={selectedCountry}
                             onSelect={setSelectedCountry}
                             variant="gold"
                           />
-                          <div className="h-4 w-px bg-saturn-obsidian/30 shrink-0" />
+                          <div className="w-px h-4 bg-saturn-obsidian/30 shrink-0" />
                           <input
                             type="tel"
                             value={formData.phone}
                             onChange={(e) =>
-                              setFormData({ ...formData, phone: e.target.value })
+                              setFormData({
+                                ...formData,
+                                phone: e.target.value,
+                              })
                             }
                             placeholder="50 123 4567"
-                            className="w-full bg-transparent text-base text-saturn-obsidian focus:outline-none placeholder-saturn-obsidian/40"
+                            className="w-full text-base bg-transparent text-saturn-obsidian focus:outline-none placeholder-saturn-obsidian/40"
                           />
                         </div>
                       </div>
@@ -243,7 +278,7 @@ export function ContactPage() {
 
                     {/* Row 3: Company / Organization Name */}
                     <div>
-                      <label className="block text-sm text-saturn-obsidian mb-2 font-medium">
+                      <label className="block mb-2 text-sm font-medium text-saturn-obsidian">
                         Company / Organization Name
                       </label>
                       <input
@@ -252,28 +287,31 @@ export function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, company: e.target.value })
                         }
-                        className="w-full bg-transparent border-b border-saturn-obsidian/35 pb-2 text-base text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian transition-colors placeholder-saturn-obsidian/40"
+                        className="w-full pb-2 text-base transition-colors bg-transparent border-b border-saturn-obsidian/35 text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian placeholder-saturn-obsidian/40"
                       />
                     </div>
 
                     {/* Row 4: How can we help? */}
                     <div>
-                      <label className="block text-sm text-saturn-obsidian mb-2 font-medium">
+                      <label className="block mb-2 text-sm font-medium text-saturn-obsidian">
                         How can we help?
                       </label>
                       <input
                         type="text"
                         value={formData.helpMessage}
                         onChange={(e) =>
-                          setFormData({ ...formData, helpMessage: e.target.value })
+                          setFormData({
+                            ...formData,
+                            helpMessage: e.target.value,
+                          })
                         }
                         placeholder="e.g. Enquiry on Gold prices, scrap gold, or bullion purchase"
-                        className="w-full bg-transparent border-b border-saturn-obsidian/35 pb-2 text-base text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian transition-colors placeholder-saturn-obsidian/40"
+                        className="w-full pb-2 text-base transition-colors bg-transparent border-b border-saturn-obsidian/35 text-saturn-obsidian focus:outline-none focus:border-saturn-obsidian placeholder-saturn-obsidian/40"
                       />
                     </div>
 
                     {/* Submit Button & Direct WhatsApp Quick-Chat Link */}
-                    <div className="pt-4 flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
                       <button
                         type="submit"
                         disabled={isSubmitting}
@@ -281,11 +319,11 @@ export function ContactPage() {
                       >
                         {isSubmitting ? (
                           <>
-                            <span className="w-4 h-4 border-2 border-saturn-gold-light border-t-transparent rounded-full animate-spin" />
+                            <span className="w-4 h-4 border-2 rounded-full border-saturn-gold-light border-t-transparent animate-spin" />
                             <span>Sending...</span>
                           </>
                         ) : (
-                          'Submit'
+                          "Submit"
                         )}
                       </button>
 
@@ -293,7 +331,7 @@ export function ContactPage() {
                         href={getWhatsAppTradingDeskUrl(formData)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 text-sm text-saturn-obsidian hover:text-black font-medium hover:underline underline-offset-4 py-2"
+                        className="inline-flex items-center justify-center gap-2 py-2 text-sm font-medium text-saturn-obsidian hover:text-black hover:underline underline-offset-4"
                       >
                         <WhatsAppIcon className="w-4 h-4 text-saturn-obsidian" />
                         <span>Or chat with our Dubai desk on WhatsApp</span>
@@ -316,15 +354,13 @@ export function ContactPage() {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="saturn-header-block mb-12 sm:mb-16"
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-12 saturn-header-block sm:mb-16"
           >
-            <span className="saturn-badge-dark">
-              HEAD OFFICE
-            </span>
+            <span className="saturn-badge-dark">HEAD OFFICE</span>
 
-            <h2 className="saturn-h2 pt-1">
+            <h2 className="pt-1 saturn-h2">
               Located in Dubai, The City of Gold.
             </h2>
           </motion.div>
@@ -333,8 +369,8 @@ export function ContactPage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className="w-full"
           >
             <DubaiGoldSoukMap />

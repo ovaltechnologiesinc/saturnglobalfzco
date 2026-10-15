@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { NAV_LINKS, COMPANY_INFO } from "@/data/companyData";
+import { LiveTradeTicker } from "@/components/common/LiveTradeTicker";
 import { cn } from "@/lib/utils";
 
 export interface NavbarProps {
@@ -42,7 +43,10 @@ export function Navbar({ currentPath }: NavbarProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full pt-3 sm:pt-4 pb-2 bg-saturn-cream transition-all">
+      <header className="sticky top-0 z-40 w-full pt-2 sm:pt-2.5 pb-2 bg-saturn-cream transition-all space-y-2">
+        {/* Slim Rectangular Sliding Live Trading Marquee (takes exact same size, length, and padding as Header) */}
+        <LiveTradeTicker theme="dark" />
+
         {/* Floating White Pill Container expanded sideways to max-w-7xl matching the page outlet */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full bg-white rounded-full px-5 sm:px-8 lg:px-10 py-2.5 sm:py-3 shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-black/[0.04] flex items-center justify-between">
