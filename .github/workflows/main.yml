@@ -33,30 +33,48 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION || 'ap-southeast-1' }}
 
       - name: 🪣 Deploy to S3 (Clean Industry Standard SPA)
+        env:
+          RAW_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         run: |
-          aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET }} \
+          # Sanitize BUCKET: strip quotes, carriage returns, newlines, whitespace, s3:// prefix, and trailing slashes
+          BUCKET=$(echo "$RAW_BUCKET" | tr -d "\r\n\"'" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's|^s3://||' -e 's|/*$||')
+
+          if [ -z "$BUCKET" ]; then
+            echo "::error::AWS_S3_BUCKET secret is empty or unset!"
+            exit 1
+          fi
+
+          echo "Target S3 bucket resolved: s3://${BUCKET}"
+
+          aws s3 sync dist "s3://${BUCKET}" \
             --delete \
             --cache-control "public, max-age=31536000, immutable"
-          aws s3 cp dist/index.html s3://${{ secrets.AWS_S3_BUCKET }}/index.html \
+
+          aws s3 cp dist/index.html "s3://${BUCKET}/index.html" \
             --cache-control "public, max-age=0, must-revalidate" \
             --content-type "text/html; charset=utf-8"
-          aws s3 cp dist/404.html s3://${{ secrets.AWS_S3_BUCKET }}/404.html \
-            --cache-control "public, max-age=0, must-revalidate" \
-            --content-type "text/html; charset=utf-8" || true
-          for route in about services markets mining marketdata market-data faq contact contactus; do
-            aws s3 cp dist/index.html s3://${{ secrets.AWS_S3_BUCKET }}/$route \
+
+          if [ -f dist/404.html ]; then
+            aws s3 cp dist/404.html "s3://${BUCKET}/404.html" \
               --cache-control "public, max-age=0, must-revalidate" \
-              --content-type "text/html; charset=utf-8" || true
+              --content-type "text/html; charset=utf-8"
+          fi
+
+          for route in about services markets mining marketdata market-data faq contact contactus; do
+            aws s3 cp dist/index.html "s3://${BUCKET}/${route}" \
+              --cache-control "public, max-age=0, must-revalidate" \
+              --content-type "text/html; charset=utf-8"
           done
 
       - name: 🔄 Invalidate CloudFront Cache
         env:
-          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          RAW_DIST_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
         run: |
-          if [ -n "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
-            echo "Invalidating CloudFront distribution $CLOUDFRONT_DISTRIBUTION_ID..."
+          DIST_ID=$(echo "$RAW_DIST_ID" | tr -d "\r\n\"' " | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+          if [ -n "$DIST_ID" ]; then
+            echo "Invalidating CloudFront distribution $DIST_ID..."
             aws cloudfront create-invalidation \
-              --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
+              --distribution-id "$DIST_ID" \
               --paths "/*"
           else
             echo "CLOUDFRONT_DISTRIBUTION_ID secret not set. Skipping automated CloudFront invalidation."
