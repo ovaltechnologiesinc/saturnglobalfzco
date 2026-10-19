@@ -11,15 +11,15 @@ export function HeroSection({ onExploreServices }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden bg-saturn-cream pt-14 pb-16 lg:pt-20 lg:pb-24 border-b border-[#E8E3D7]">
       <Container>
-        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
-          {/* Left Column: Heading, Subtitle & About Us Button (matches Screenshot 1) */}
+        <div className="grid items-start grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
+          {/* Left Column: Heading, Subtitle & About Us Button (horizontally aligned with top of right image) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="space-y-6 text-left lg:col-span-6 sm:space-y-8"
           >
-            <div className="pt-2 sm:pt-4">
+            <div>
               <h1 className="saturn-h1 mb-6">
                 Your Reliable Partner for Gold Trading, Mining Support, and
                 Brokerage
