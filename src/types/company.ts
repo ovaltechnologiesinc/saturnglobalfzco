@@ -4,6 +4,8 @@ export interface CompanyContact {
   phone: string;
   displayPhone: string;
   email: string;
+  website: string;
+  domain: string;
   address: {
     building: string;
     office: string;

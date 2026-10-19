@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { DubaiGoldSoukMap } from "./DubaiGoldSoukMap";
 import { COMPANY_INFO } from "@/data/companyData";
-import { Building2, Mail, Phone, CheckCircle2 } from "lucide-react";
+import { Building2, Mail, Phone, Globe, CheckCircle2 } from "lucide-react";
 import {
   submitContactInquiry,
   getWhatsAppTradingDeskUrl,
@@ -127,6 +127,17 @@ export function ContactPage() {
                       className="hover:underline underline-offset-2"
                     >
                       {COMPANY_INFO.displayPhone} (Dubai Desk)
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm font-normal sm:text-base">
+                    <Globe className="w-5 h-5 shrink-0 text-saturn-obsidian" />
+                    <a
+                      href={COMPANY_INFO.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline underline-offset-2"
+                    >
+                      {COMPANY_INFO.domain}
                     </a>
                   </div>
                 </div>

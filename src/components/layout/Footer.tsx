@@ -110,6 +110,16 @@ export function Footer() {
                   {COMPANY_INFO.email}
                 </a>
               </p>
+              <p>
+                <a
+                  href={COMPANY_INFO.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-saturn-gold transition-colors text-xs text-white/70"
+                >
+                  {COMPANY_INFO.domain}
+                </a>
+              </p>
             </div>
           </div>
 

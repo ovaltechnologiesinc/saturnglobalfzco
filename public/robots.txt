@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://saturnglobal.ae/sitemap.xml
+# Sitemap Index for Google, Bing, and Search Crawlers
+Sitemap: https://saturnglobalfzco.com/sitemap.xml

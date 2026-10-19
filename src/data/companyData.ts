@@ -6,6 +6,8 @@ export const COMPANY_INFO: CompanyContact = {
   phone: '+971506874646',
   displayPhone: '+971 50 687 4646',
   email: 'Saturnglobalfzco@gmail.com',
+  website: 'https://saturnglobalfzco.com',
+  domain: 'saturnglobalfzco.com',
   address: {
     building: 'DMCC Business Centre',
     office: 'Unit No: 3O-01-5071, Level No 1',
