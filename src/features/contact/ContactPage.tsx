@@ -326,7 +326,7 @@ export function ContactPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="bg-saturn-obsidian hover:bg-[#1E2029] text-saturn-gold-light hover:text-white rounded-full px-12 py-3.5 text-base font-semibold transition-all duration-200 shadow-xl active:scale-95 w-full sm:w-auto border border-saturn-obsidian/40 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                        className="bg-saturn-obsidian hover:bg-[#1E2029] text-saturn-gold-light hover:text-white rounded-tl-[18px] sm:rounded-tl-[24px] rounded-br-[18px] sm:rounded-br-[24px] rounded-tr-[6px] sm:rounded-tr-[8px] rounded-bl-[6px] sm:rounded-bl-[8px] px-12 py-3.5 text-base font-semibold transition-all duration-200 shadow-xl active:scale-95 w-full sm:w-auto border border-saturn-obsidian/40 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       >
                         {isSubmitting ? (
                           <>

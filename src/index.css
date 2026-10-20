@@ -223,13 +223,13 @@
     @apply text-base sm:text-lg lg:text-[18px] leading-[1.75] text-white/95 font-normal max-w-2xl;
   }
 
-  /* Action Buttons */
+  /* Action Buttons with Saturn Global Signature Diagonal Geometry */
   .saturn-btn-dark {
-    @apply bg-saturn-surface hover:bg-[#1E1F28] text-white hover:text-saturn-gold border border-saturn-gold/40 hover:border-saturn-gold text-base font-normal px-9 py-3.5 rounded-full transition-all duration-200 shadow-md active:scale-95 inline-flex items-center justify-center;
+    @apply bg-saturn-surface hover:bg-[#1E1F28] text-white hover:text-saturn-gold border border-saturn-gold/40 hover:border-saturn-gold text-base font-normal px-9 py-3.5 rounded-tl-[18px] sm:rounded-tl-[22px] rounded-br-[18px] sm:rounded-br-[22px] rounded-tr-[6px] sm:rounded-tr-[8px] rounded-bl-[6px] sm:rounded-bl-[8px] transition-all duration-200 shadow-md active:scale-95 inline-flex items-center justify-center;
   }
 
   .saturn-btn-gold {
-    @apply bg-saturn-gold hover:bg-saturn-gold-hover text-saturn-obsidian text-base font-medium px-9 py-3.5 rounded-full transition-all duration-200 shadow-md active:scale-95 inline-flex items-center justify-center;
+    @apply bg-saturn-gold hover:bg-saturn-gold-hover text-saturn-obsidian text-base font-medium px-9 py-3.5 rounded-tl-[18px] sm:rounded-tl-[22px] rounded-br-[18px] sm:rounded-br-[22px] rounded-tr-[6px] sm:rounded-tr-[8px] rounded-bl-[6px] sm:rounded-bl-[8px] transition-all duration-200 shadow-md active:scale-95 inline-flex items-center justify-center;
   }
 
   /* Standard Card Container on Dark Obsidian */

@@ -92,12 +92,12 @@ export function Navbar({ currentPath }: NavbarProps) {
               })}
             </nav>
 
-            {/* Right CTA Button: Deep black & gold pill "Contact Us" (Desktop only) */}
+            {/* Right CTA Button: Saturn Global Diagonal Geometric "Contact Us" (Desktop only) */}
             <div className="items-center hidden lg:flex">
               <Link
                 to="/contactus"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="bg-[#121318] hover:bg-[#1E1F28] text-white hover:text-saturn-gold border border-saturn-gold/40 hover:border-saturn-gold text-xs sm:text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-200 shadow-sm active:scale-95"
+                className="bg-[#121318] hover:bg-[#1E1F28] text-white hover:text-saturn-gold border border-saturn-gold/40 hover:border-saturn-gold text-xs sm:text-sm font-medium px-6 py-2.5 rounded-tl-[16px] sm:rounded-tl-[20px] rounded-br-[16px] sm:rounded-br-[20px] rounded-tr-[6px] sm:rounded-tr-[8px] rounded-bl-[6px] sm:rounded-bl-[8px] transition-all duration-200 shadow-sm active:scale-95"
               >
                 Contact Us
               </Link>
@@ -209,7 +209,7 @@ export function Navbar({ currentPath }: NavbarProps) {
                   )}
                 </div>
 
-                {/* Primary Contact Us Button */}
+                {/* Primary Contact Us Button with Signature Diagonal Curvature */}
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -219,7 +219,7 @@ export function Navbar({ currentPath }: NavbarProps) {
                   <Link
                     to="/contactus"
                     onClick={closeMenu}
-                    className="block w-full py-4 px-6 rounded-full bg-saturn-gold hover:bg-[#B89047] text-saturn-obsidian text-center text-lg font-semibold shadow-md transition-all active:scale-98"
+                    className="block w-full py-4 px-6 rounded-tl-[22px] rounded-br-[22px] rounded-tr-[8px] rounded-bl-[8px] bg-saturn-gold hover:bg-[#B89047] text-saturn-obsidian text-center text-lg font-semibold shadow-md transition-all active:scale-98"
                   >
                     Contact Us
                   </Link>

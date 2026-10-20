@@ -87,14 +87,12 @@ export function MarketsPage({ onContact: _ }: MarketsPageProps) {
               transition={{ duration: 0.7, ease: 'easeOut' }}
               className="lg:col-span-6 flex justify-center"
             >
-              <div className="w-full max-w-[480px]">
+              <div className="w-full max-w-[540px]">
                 <img
-                  src="/images/market-africa-map.svg"
+                  src="/images/market-africa-map.jpg"
                   alt="African Gold Trading Partners Map"
                   className="w-full h-auto object-contain"
                   loading="eager"
-                  width="480"
-                  height="550"
                 />
               </div>
             </motion.div>
@@ -152,14 +150,12 @@ export function MarketsPage({ onContact: _ }: MarketsPageProps) {
               transition={{ duration: 0.7, ease: 'easeOut' }}
               className="lg:col-span-6 flex justify-center"
             >
-              <div className="w-full max-w-[560px]">
+              <div className="w-full max-w-[540px]">
                 <img
-                  src="/images/market-middle-east-map.svg"
+                  src="/images/market-middle-east-map.jpg"
                   alt="Middle East and Turkey Gold Trading Map"
                   className="w-full h-auto object-contain"
                   loading="lazy"
-                  width="560"
-                  height="440"
                 />
               </div>
             </motion.div>
