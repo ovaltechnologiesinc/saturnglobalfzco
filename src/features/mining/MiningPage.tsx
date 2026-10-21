@@ -157,7 +157,7 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="lg:col-span-5 flex justify-center"
             >
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-tl-[80px] rounded-br-[80px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#121318] shrink-0 hover:scale-105 transition-all duration-300">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 aspect-square rounded-tl-[80px] rounded-br-[80px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#121318] shrink-0 hover:scale-105 transition-all duration-300">
                 <img
                   src="/images/saturn-branded-bullion.jpg"
                   alt="Saturn Global Gold Bullion Mining Project Finance"
@@ -207,7 +207,7 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="lg:col-span-5 flex justify-center"
             >
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-tr-[80px] rounded-bl-[80px] rounded-tl-3xl rounded-br-3xl overflow-hidden shadow-2xl border-4 border-white/90 bg-[#121318] shrink-0 hover:scale-105 transition-all duration-300">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 aspect-square rounded-tr-[80px] rounded-bl-[80px] rounded-tl-3xl rounded-br-3xl overflow-hidden shadow-2xl border-4 border-white/90 bg-[#121318] shrink-0 hover:scale-105 transition-all duration-300">
                 <img
                   src="/images/saturn-branded-vault.jpg"
                   alt="Saturn Global Secure Vaulting and Working Partnerships"
@@ -268,7 +268,7 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="lg:col-span-5 flex justify-center"
             >
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-[48px] overflow-hidden shadow-2xl border-2 border-saturn-gold bg-[#111] shrink-0 hover:scale-105 transition-all duration-300 group">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 aspect-square rounded-[48px] overflow-hidden shadow-2xl border-2 border-saturn-gold bg-[#111] shrink-0 hover:scale-105 transition-all duration-300 group">
                 <img
                   src="/images/saturn-real-bullion.webp"
                   alt="Saturn African Gold Bullion Supply"

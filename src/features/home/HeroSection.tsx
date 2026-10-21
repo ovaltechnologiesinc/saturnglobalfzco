@@ -57,7 +57,7 @@ export function HeroSection({ onExploreServices }: HeroSectionProps) {
           >
             <div className="relative w-full max-w-[460px] grid grid-cols-2 gap-2 select-none">
               {/* Row 1 Left: Official Saturn Global Bullion Bars with rounded top-left corner */}
-              <div className="h-44 sm:h-52 rounded-tl-[80px] sm:rounded-tl-[100px] overflow-hidden bg-[#AA822A] shadow-md border-2 border-white/50 group">
+              <div className="h-44 sm:h-52 aspect-[230/208] rounded-tl-[80px] sm:rounded-tl-[100px] overflow-hidden bg-[#AA822A] shadow-md border-2 border-white/50 group">
                 <img
                   src="/images/saturn-branded-bullion.jpg"
                   alt="Saturn Global FZCO 999.9 Fine Gold Bullion Bars"
@@ -69,7 +69,7 @@ export function HeroSection({ onExploreServices }: HeroSectionProps) {
               </div>
 
               {/* Row 1 Right: Real physical gold bullion bars uploaded by user with rounded bottom-left corner */}
-              <div className="h-44 sm:h-52 rounded-bl-[80px] sm:rounded-bl-[100px] overflow-hidden shadow-md border-2 border-white/50 group bg-[#111]">
+              <div className="h-44 sm:h-52 aspect-[230/208] rounded-bl-[80px] sm:rounded-bl-[100px] overflow-hidden shadow-md border-2 border-white/50 group bg-[#111]">
                 <img
                   src="/images/saturn-real-bullion.webp"
                   alt="Real physical gold bars and bullion stock"
@@ -104,7 +104,7 @@ export function HeroSection({ onExploreServices }: HeroSectionProps) {
               </div>
 
               {/* Row 3 Left: Molten Gold Refinery Artisan with rounded bottom-left corner */}
-              <div className="h-44 sm:h-52 rounded-bl-[80px] sm:rounded-bl-[100px] overflow-hidden bg-[#141E1A] shadow-md border-2 border-white/50 group">
+              <div className="h-44 sm:h-52 aspect-[230/208] rounded-bl-[80px] sm:rounded-bl-[100px] overflow-hidden bg-[#141E1A] shadow-md border-2 border-white/50 group">
                 <img
                   src="/images/saturn-branded-refining.jpg"
                   alt="Gold refinery smelting and testing in Dubai"
@@ -116,7 +116,7 @@ export function HeroSection({ onExploreServices }: HeroSectionProps) {
               </div>
 
               {/* Row 3 Right: High-security Vault with rounded top-right corner */}
-              <div className="h-44 sm:h-52 rounded-tr-[80px] sm:rounded-tr-[100px] overflow-hidden shadow-md border-2 border-white/50 group bg-[#111]">
+              <div className="h-44 sm:h-52 aspect-[230/208] rounded-tr-[80px] sm:rounded-tr-[100px] overflow-hidden shadow-md border-2 border-white/50 group bg-[#111]">
                 <img
                   src="/images/saturn-branded-vault.jpg"
                   alt="High-security gold bullion vault in Dubai"
