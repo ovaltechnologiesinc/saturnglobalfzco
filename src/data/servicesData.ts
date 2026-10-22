@@ -84,7 +84,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDescription: 'We fund gold mining projects in Africa and bring pure gold safely to Dubai buyers.',
     fullDescription: 'SATURN GLOBAL FZCO supports gold mining operations in Africa. We help with project funding, direct supply contracts, and secure air shipping. We handle customs clearance, laboratory testing, and fast same-day payment so both miners and buyers succeed.',
     iconName: 'Pickaxe',
-    imageSrc: '/images/saturn-real-bullion.webp',
+    imageSrc: '/images/saturn-real-bullion.jpg',
     highlights: [
       'Direct supply of pure gold from mines',
       'Project funding and clear contracts',

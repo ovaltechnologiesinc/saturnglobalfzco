@@ -97,7 +97,7 @@ export function ServicesOverview({ onContactForService }: ServicesOverviewProps)
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-[420px] aspect-[16/11] rounded-tr-[48px] rounded-bl-[48px] rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl border-2 border-saturn-gold/60 bg-black/50">
                 <img
-                  src="/images/saturn-real-bullion.webp"
+                  src="/images/saturn-real-bullion.jpg"
                   alt="Real Physical Gold Bullion Stock"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"

@@ -270,7 +270,7 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
             >
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 aspect-square rounded-[48px] overflow-hidden shadow-2xl border-2 border-saturn-gold bg-[#111] shrink-0 hover:scale-105 transition-all duration-300 group">
                 <img
-                  src="/images/saturn-real-bullion.webp"
+                  src="/images/saturn-real-bullion.jpg"
                   alt="Saturn African Gold Bullion Supply"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"

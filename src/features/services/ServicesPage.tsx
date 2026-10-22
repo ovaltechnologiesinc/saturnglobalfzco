@@ -124,7 +124,7 @@ export function ServicesPage({ onInquire: _ }: ServicesPageProps) {
               >
                 <div className="w-full max-w-[560px] aspect-[16/10] rounded-tr-[56px] rounded-bl-[56px] rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl border-2 border-white/60 bg-[#181A20] group">
                   <img
-                    src="/images/saturn-real-bullion.webp"
+                    src="/images/saturn-real-bullion.jpg"
                     alt="Real Physical Gold Bullion and Scrap Stock"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"

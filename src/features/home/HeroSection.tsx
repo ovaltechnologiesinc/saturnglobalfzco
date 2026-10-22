@@ -71,7 +71,7 @@ export function HeroSection({ onExploreServices }: HeroSectionProps) {
               {/* Row 1 Right: Real physical gold bullion bars uploaded by user with rounded bottom-left corner */}
               <div className="h-44 sm:h-52 aspect-[230/208] rounded-bl-[80px] sm:rounded-bl-[100px] overflow-hidden shadow-md border-2 border-white/50 group bg-[#111]">
                 <img
-                  src="/images/saturn-real-bullion.webp"
+                  src="/images/saturn-real-bullion.jpg"
                   alt="Real physical gold bars and bullion stock"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                   loading="eager"
