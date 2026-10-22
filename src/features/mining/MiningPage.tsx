@@ -15,7 +15,7 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
   // High-definition gold mining aerial video stream
   const videoSrc =
     'https://video.wixstatic.com/video/596625_5c2ac6dac42f4adda6fca220d557bb8a/720p/mp4/file.mp4';
-  const posterSrc = '/images/saturn-branded-bullion.jpg';
+  const posterSrc = '/images/saturn-mining-poster.jpg';
 
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -159,7 +159,7 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
             >
               <div className="w-64 h-64 sm:w-80 sm:h-80 aspect-square rounded-tl-[80px] rounded-br-[80px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#121318] shrink-0 hover:scale-105 transition-all duration-300">
                 <img
-                  src="/images/saturn-branded-bullion.jpg"
+                  src="/images/saturn-mining-finance.jpg"
                   alt="Saturn Global Gold Bullion Mining Project Finance"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -209,7 +209,7 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
             >
               <div className="w-64 h-64 sm:w-80 sm:h-80 aspect-square rounded-tr-[80px] rounded-bl-[80px] rounded-tl-3xl rounded-br-3xl overflow-hidden shadow-2xl border-4 border-white/90 bg-[#121318] shrink-0 hover:scale-105 transition-all duration-300">
                 <img
-                  src="/images/saturn-branded-vault.jpg"
+                  src="/images/saturn-mining-partners.jpg"
                   alt="Saturn Global Secure Vaulting and Working Partnerships"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -270,8 +270,8 @@ export function MiningPage({ onPartnerInquiry: _ }: MiningPageProps) {
             >
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 aspect-square rounded-[48px] overflow-hidden shadow-2xl border-2 border-saturn-gold bg-[#111] shrink-0 hover:scale-105 transition-all duration-300 group">
                 <img
-                  src="/images/saturn-real-bullion.jpg"
-                  alt="Saturn African Gold Bullion Supply"
+                  src="/images/saturn-mining-supply.jpg"
+                  alt="Saturn African Gold Bullion Supply and Direct Transport"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                   width="320"

@@ -7,7 +7,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDescription: 'We help you buy and sell pure gold bars and scrap gold easily with fast same-day payment.',
     fullDescription: 'At SATURN GLOBAL FZCO, you can buy and sell physical gold with complete peace of mind. We buy scrap gold, old jewelry, and fine bullion bars. When you sell to us, we give you clear prices and pay you on the very same day in UAE Dirhams (AED) or US Dollars (USD).',
     iconName: 'Coins',
-    imageSrc: '/images/saturn-branded-bullion.jpg',
+    imageSrc: '/images/saturn-services-brokerage.jpg',
     highlights: [
       'Same-day fast payment to your account',
       'Fair, honest prices updated every minute',
@@ -22,7 +22,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDescription: 'Our certified Dubai lab tests how pure your gold is and melts it into solid clean bars.',
     fullDescription: 'You can bring your gold to our laboratory in Dubai. We use official tests to check the exact purity of your metal. Our laboratory is authorized by the Dubai Municipality and follows strict international quality rules (ISO 11426).',
     iconName: 'FlaskConical',
-    imageSrc: '/images/saturn-branded-refining.jpg',
+    imageSrc: '/images/saturn-services-assay.jpg',
     highlights: [
       'Official test certificates you can trust',
       'Dubai Municipality approved laboratory',
@@ -38,7 +38,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDescription: 'We refine raw and mixed gold into ultra-pure 999.9 kilobars through certified refiners.',
     fullDescription: 'Refining cleans all impurities out of the gold. We work with DMCC Dubai Good Delivery and LBMA London Good Delivery accredited refiners. Your gold is turned into 999.9 or 995 pure kilobars, and any silver inside is also saved and returned to you.',
     iconName: 'Flame',
-    imageSrc: '/images/saturn-branded-refining.jpg',
+    imageSrc: '/images/saturn-services-smelting.jpg',
     highlights: [
       'DMCC Dubai Good Delivery certified bars',
       'LBMA London Good Delivery standards',
@@ -54,7 +54,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDescription: 'Store your physical gold inside our high-security vaults with 24/7 protection and insurance.',
     fullDescription: 'Keep your gold safe away from home. Our modern vault rooms have thick steel doors, round-the-clock security guards, alarm systems, and full insurance. You can deposit or collect your gold whenever you need.',
     iconName: 'ShieldCheck',
-    imageSrc: '/images/saturn-branded-vault.jpg',
+    imageSrc: '/images/saturn-services-vaulting.jpg',
     highlights: [
       'Full insurance coverage for all stored gold',
       'High security steel vaults in Dubai',
@@ -84,7 +84,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDescription: 'We fund gold mining projects in Africa and bring pure gold safely to Dubai buyers.',
     fullDescription: 'SATURN GLOBAL FZCO supports gold mining operations in Africa. We help with project funding, direct supply contracts, and secure air shipping. We handle customs clearance, laboratory testing, and fast same-day payment so both miners and buyers succeed.',
     iconName: 'Pickaxe',
-    imageSrc: '/images/saturn-real-bullion.jpg',
+    imageSrc: '/images/saturn-mining-poster.jpg',
     highlights: [
       'Direct supply of pure gold from mines',
       'Project funding and clear contracts',

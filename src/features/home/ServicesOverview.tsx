@@ -43,8 +43,8 @@ export function ServicesOverview({ onContactForService }: ServicesOverviewProps)
             <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
               <div className="w-full max-w-[420px] aspect-[16/11] rounded-tl-[48px] rounded-br-[48px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-2xl border-2 border-saturn-gold/50 bg-black/40">
                 <img
-                  src="/images/saturn-branded-bullion.jpg"
-                  alt="Saturn Global FZCO 999.9 Fine Gold Bullion Bars"
+                  src="/images/saturn-brokerage-advisory.jpg"
+                  alt="Saturn Global Gold Brokerage and Market Advisory"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   width="420"
@@ -97,8 +97,8 @@ export function ServicesOverview({ onContactForService }: ServicesOverviewProps)
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-[420px] aspect-[16/11] rounded-tr-[48px] rounded-bl-[48px] rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl border-2 border-saturn-gold/60 bg-black/50">
                 <img
-                  src="/images/saturn-real-bullion.jpg"
-                  alt="Real Physical Gold Bullion Stock"
+                  src="/images/saturn-scrap-trading.jpg"
+                  alt="Saturn Physical Bullion and Scrap Gold Counter"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   width="420"
@@ -123,8 +123,8 @@ export function ServicesOverview({ onContactForService }: ServicesOverviewProps)
             <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
               <div className="w-full max-w-[420px] aspect-[16/11] rounded-tl-[48px] rounded-br-[48px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-2xl border-2 border-saturn-gold/50 bg-black/40">
                 <img
-                  src="/images/saturn-branded-refining.jpg"
-                  alt="Gold Assaying and Smelting in Dubai"
+                  src="/images/saturn-lab-testing.jpg"
+                  alt="Saturn Precious Metals Assaying and Laboratory Testing"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   width="420"

@@ -89,7 +89,7 @@ export function MarketsPage({ onContact: _ }: MarketsPageProps) {
             >
               <div className="w-full max-w-[540px] aspect-square flex items-center justify-center">
                 <img
-                  src="/images/market-africa-map.jpg"
+                  src="/images/market-africa-map.png"
                   alt="African Gold Trading Partners Map"
                   className="w-full h-auto object-contain aspect-square"
                   loading="eager"
@@ -154,7 +154,7 @@ export function MarketsPage({ onContact: _ }: MarketsPageProps) {
             >
               <div className="w-full max-w-[540px] aspect-[960/735] flex items-center justify-center">
                 <img
-                  src="/images/market-middle-east-map.jpg"
+                  src="/images/market-middle-east-map.png"
                   alt="Middle East and Turkey Gold Trading Map"
                   className="w-full h-auto object-contain aspect-[960/735]"
                   loading="lazy"

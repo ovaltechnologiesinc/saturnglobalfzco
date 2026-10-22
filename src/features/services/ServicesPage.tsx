@@ -102,8 +102,8 @@ export function ServicesPage({ onInquire: _ }: ServicesPageProps) {
               >
                 <div className="w-full max-w-[560px] aspect-[16/10] rounded-tl-[56px] rounded-br-[56px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-2xl border-2 border-saturn-gold/30 bg-[#181A20] group">
                   <img
-                    src="/images/saturn-branded-bullion.jpg"
-                    alt="Saturn Global Gold Brokerage & Bullion"
+                    src="/images/saturn-services-brokerage.jpg"
+                    alt="Saturn Global Gold Brokerage & Trading Consultation Desk"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="eager"
                     width="560"
@@ -124,7 +124,7 @@ export function ServicesPage({ onInquire: _ }: ServicesPageProps) {
               >
                 <div className="w-full max-w-[560px] aspect-[16/10] rounded-tr-[56px] rounded-bl-[56px] rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl border-2 border-white/60 bg-[#181A20] group">
                   <img
-                    src="/images/saturn-real-bullion.jpg"
+                    src="/images/saturn-services-scrap.jpg"
                     alt="Real Physical Gold Bullion and Scrap Stock"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
@@ -195,8 +195,8 @@ export function ServicesPage({ onInquire: _ }: ServicesPageProps) {
               >
                 <div className="relative w-full max-w-[560px] aspect-[16/10] rounded-[48px] overflow-hidden shadow-2xl border-2 border-saturn-gold/40 bg-[#181A20] group">
                   <img
-                    src="/images/saturn-branded-refining.jpg"
-                    alt="Gold Assaying and Crucible Melting in Dubai"
+                    src="/images/saturn-services-assay.jpg"
+                    alt="Gold Assaying and Laboratory Testing in Dubai"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     width="560"
@@ -227,7 +227,7 @@ export function ServicesPage({ onInquire: _ }: ServicesPageProps) {
               <div className="space-y-6">
                 <div className="w-full aspect-[4/3] rounded-tl-[48px] rounded-br-[48px] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-lg border border-saturn-gold/40 bg-black/40">
                   <img
-                    src="/images/saturn-branded-refining.jpg"
+                    src="/images/saturn-services-smelting.jpg"
                     alt="Saturn Gold Refining & Smelting Process"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
@@ -272,7 +272,7 @@ export function ServicesPage({ onInquire: _ }: ServicesPageProps) {
               <div className="space-y-6">
                 <div className="w-full aspect-[4/3] rounded-[36px] overflow-hidden shadow-xl border border-saturn-gold/40 bg-black/40">
                   <img
-                    src="/images/saturn-branded-vault.jpg"
+                    src="/images/saturn-services-vaulting.jpg"
                     alt="Saturn DMCC Secure Vault Storage in Dubai"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
